@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "name": "ssssss",
+      "price": "1",
+      "description": "sddddddddddddd",
+      "id": 4
+    },
+    {
+      "name": "iphone",
+      "price": "85555",
+      "description": "iphone made in america ",
+      "id": 5
+    },
+    {
+      "name": "produit B",
+      "price": "852",
+      "description": "aaaaaaaaaaaaaaaa",
+      "id": 6
+    },
+    {
+      "name": "produit C",
+      "price": "855",
+      "description": "produit is very used",
+      "id": 7
+    }
+  ],
+  "cart": [
+    {
+      "name": "produit A",
+      "price": "852",
+      "description": "c'est un produit nouveau fabriqué en france ",
+      "id": 1
+    },
+    {
+      "name": "slouma",
+      "price": "855",
+      "description": "slouma ingenieur en genie logiciel et systeme d'information",
+      "id": 2
+    },
+    {
+      "name": "esprit",
+      "price": "8100",
+      "description": "esprit se former autrement",
+      "id": 3
+    },
+    {
+      "name": "ss",
+      "price": "1",
+      "description": "sddddddddddddd",
+      "id": 4
+    },
+    {
+      "name": "qqzdsfcdsfc",
+      "price": "45",
+      "description": "45615615615sqdfcdscdsv",
+      "id": 6
+    },
+    {
+      "name": "produit C",
+      "price": "855",
+      "description": "produit is very used",
+      "id": 7
+    }
+  ]
+}

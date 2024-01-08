@@ -1,0 +1,15 @@
+<div class="container">
+    <input type="text" [(ngModel)]="searchText" placeholder="Rechercher un produit..." class="form-control my-4">
+    <div class="card mt-2 p-2" *ngFor="let product of listeProduct | filter: searchText">
+        <h4 class="my-2"><strong>produit {{product.id}} </strong> </h4>
+        <p class="my-2  "><strong>Price : {{product.price}}</strong></p>
+        <div class="d-flex gap-2 flex-wrap">
+            <button class="btn btn-primary me-2" (click)="achter(product)">Buy</button>
+            <!-- <button class="btn btn-info" (click)="getByID(product.id)">Details</button> -->
+            <button class="btn btn-info me-2" [routerLink]="['/datails',product.id]">Details</button>
+            <button class="btn btn-info me-2" (click)="sendId(product.id)">Update</button>
+            <button class="btn btn-info me-2" (click)="delte(product.id)">delete</button>
+
+        </div>
+    </div>
+</div>

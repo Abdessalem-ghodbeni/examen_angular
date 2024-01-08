@@ -1,0 +1,31 @@
+<div class="container mt-5">
+
+    <div class="card p-3 w-100">
+
+
+        <input type="text" [(ngModel)]="searchText" placeholder="Rechercher un produit..." class="form-control mb-3">
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">name</th>
+                        <th scope="col">price</th>
+                        <th scope="col">description</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let produit of listeProductChart | filter: searchText">
+                    <tr>
+                        <th scope="row">{{produit.id}}</th>
+                        <td>{{produit.name}}</td>
+                        <td>{{produit.price}}</td>
+                        <td>{{produit.description}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>

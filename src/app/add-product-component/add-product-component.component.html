@@ -1,0 +1,42 @@
+<div class="container custumer-container mt-5">
+    <div class="card p-3 w-100">
+        <form #addProductFomrs="ngForm" (ngSubmit)="ajouterProduit()">
+
+            <div class="mb-3   ">
+                <label for="exampleFormControlInput1" class="form-label">Name: </label>
+                <input required type="text" class="form-control" id="exampleFormControlInput1" name="name"
+                    [(ngModel)]="product.name" #name="ngModel">
+
+                <span class="text-danger mt-3" *ngIf="name.errors?.['required'] && name.touched">name is required</span>
+            </div>
+
+
+            <div class="mb-3  ">
+                <label for="exampleFormControlInput1" class="form-label">Price: </label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="price"
+                    [(ngModel)]="product.price" #price="ngModel" pattern="[0-9]+">
+                <!-- <span class="text-danger mt-3" *ngIf="price.errors?.['pattern'] && price.touched">price ne contient que
+                    des
+                    chiffres</span> -->
+                <span class="text-danger mt-3" *ngIf="price.invalid">price ne contient que
+                    des
+                    chiffres</span>
+            </div>
+
+
+            <div class="mb-3  ">
+                <label for="exampleFormControlInput1" class="form-label">description: </label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" name="description"
+                    [(ngModel)]="product.description" #description="ngModel" minlength="10">
+                <span class="text-danger" *ngIf="description.errors?.['minlength'] && description.touched"> Description
+                    contient au minimum 10 caractéres</span>
+            </div>
+
+            <div class="mt-3 ">
+                <button class="btn btn-primary  " [disabled]="addProductFomrs.invalid">Add product</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
